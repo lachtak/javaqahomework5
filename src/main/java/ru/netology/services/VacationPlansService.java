@@ -9,10 +9,9 @@ public class VacationPlansService {
         for (int month = 0; month < 12; month++) {
             if (money >= threshold) {
                 count++;
-                money = ((money + (income - expense)) - expense) / 3;
-            }
-            else {
-                money = money+(income - expense);
+                money = (money - expense) / 3;
+            } else {
+                money = money + (income - expense);
             }
 
         }

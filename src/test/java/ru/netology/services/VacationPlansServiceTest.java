@@ -1,15 +1,12 @@
 package ru.netology.services;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import ru.netology.services.VacationPlansService;
 
 public class VacationPlansServiceTest {
     @ParameterizedTest
-    @CsvFileSource(files="src/test/resources/vacation.csv")
+    @CsvFileSource(files = "src/test/resources/vacation.csv")
     public void vacmonth(int expected, int income, int expense, int threshold) {
         VacationPlansService service = new VacationPlansService();
 
